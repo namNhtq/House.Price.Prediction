@@ -58,25 +58,37 @@ HousePrice_Prediction/
 - Thư mục này cũng có thể chứa dữ liệu đã được làm sạch hoặc xử lý để phục vụ cho quá trình huấn luyện mô hình.
 
 ### 3. Notebook `houseprice_prediction.ipynb`
-Đây là file chính thực hiện các bước phân tích và xây dựng mô hình dự đoán giá nhà:
+Đây là các file chính thực hiện các bước phân tích và xây dựng mô hình dự đoán giá nhà:
 1. **Import thư viện**: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, v.v.
+   
 2. **Đọc dữ liệu**: Đọc file CSV hoặc JSON từ thư mục `data/`.
+   
 3. **Khám phá dữ liệu (EDA)**:
    - Kiểm tra các thông tin cơ bản về dữ liệu (kích thước, kiểu dữ liệu, thống kê mô tả).
+     
    - Trực quan hóa mối quan hệ giữa các biến (giá, diện tích, vị trí, số phòng, v.v.).
+     
    - Xử lý dữ liệu thiếu (missing values), dữ liệu ngoại lai (outliers).
+     
 4. **Tiền xử lý dữ liệu**:
    - Mã hóa (encoding) các biến phân loại (categorical variables).
+     
    - Chuẩn hóa (scaling) các biến liên tục nếu cần.
 5. **Xây dựng và huấn luyện mô hình**:
    - Áp dụng các mô hình hồi quy (Linear Regression, Random Forest, XGBoost, v.v.).
+     
    - Chia dữ liệu thành tập huấn luyện (train set) và tập kiểm tra (test set).
+     
    - Huấn luyện mô hình và điều chỉnh siêu tham số (hyperparameters).
+     
 6. **Đánh giá mô hình**:
    - Tính các chỉ số như MAE (Mean Absolute Error), RMSE (Root Mean Squared Error), R² (Coefficient of Determination).
+     
    - So sánh kết quả giữa các mô hình và lựa chọn mô hình tối ưu.
+     
 7. **Trực quan hóa kết quả**:
    - Biểu đồ so sánh giá trị dự đoán và giá trị thực tế.
+     
    - Biểu đồ phân bố sai số (residuals).
 
 ### 4. Hướng dẫn cài đặt và sử dụng
@@ -86,25 +98,30 @@ HousePrice_Prediction/
    source venv/bin/activate  # Trên Linux/Mac
    # hoặc .\venv\Scripts\activate (trên Windows)
    ```
+   
 2. **Cài đặt các thư viện cần thiết**:
-   - Sử dụng file `requirements.txt` (nếu có) hoặc cài đặt thủ công:
      ```bash
      pip install scrapy
      pip install numpy pandas matplotlib seaborn scikit-learn plotly
      # ... và các thư viện khác nếu cần
      ```
+     
 3. **Chạy dự án crawl dữ liệu**:
    - Di chuyển vào thư mục `Crawl_data/`:
      ```bash
      cd Crawl_data
      scrapy crawl meeyland  # tên spider được định nghĩa trong meeyland.py
      ```
+     
    - Dữ liệu sau khi crawl sẽ được lưu trong thư mục `data/` hoặc đường dẫn bạn cấu hình.
+   - 
 4. **Phân tích và dự đoán**:
    - Mở notebook `houseprice_prediction.ipynb` bằng Jupyter Notebook hoặc JupyterLab.
+     
    - Chạy các cell theo thứ tự để thực hiện quá trình EDA, tiền xử lý, huấn luyện và đánh giá mô hình.
 
 ### 5. Kết quả
 - **Kết quả**: 
   - Mô hình có thể dự đoán giá nhà với độ chính xác tương đối, hỗ trợ người dùng tham khảo giá thị trường.
+    
   - Các biểu đồ và thống kê giúp nắm bắt xu hướng, yếu tố ảnh hưởng đến giá nhà (vị trí, diện tích, số phòng, v.v.).
