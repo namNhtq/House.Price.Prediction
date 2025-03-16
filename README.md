@@ -1,4 +1,3 @@
-```markdown
 # Dự Án Dự Đoán Giá Nhà (House Price Prediction)
 
 ## Giới thiệu
