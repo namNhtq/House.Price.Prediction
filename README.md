@@ -114,7 +114,7 @@ HousePrice_Prediction/
      ```
      
    - Dữ liệu sau khi crawl sẽ được lưu trong thư mục `data/` hoặc đường dẫn bạn cấu hình.
-   - 
+    
 4. **Phân tích và dự đoán**:
    - Mở notebook `houseprice_prediction.ipynb` bằng Jupyter Notebook hoặc JupyterLab.
      
